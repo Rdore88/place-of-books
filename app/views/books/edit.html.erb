@@ -1,0 +1,10 @@
+<h2>Edit <%= @book.name %></h2>
+<%= form_tag("/books/#{@book.id}", method: "patch") do %>
+  <%= label_tag "book[name]", "Name" %>
+  <%= text_field_tag "book[name]", @book.name %>
+  <%= label_tag "book[isbn_number]", "ISBN number" %>
+  <%= text_field_tag "book[isbn_number]", @book.isbn_number %>
+  <%= label_tag "book[description]", "Description" %>
+  <%= text_area_tag "book[description]", @book.description %>
+  <%= submit_tag %>
+<% end %>

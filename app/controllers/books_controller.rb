@@ -1,3 +1,5 @@
+require "pry"
+
 class BooksController < ApplicationController
   def index
     @books = Book.all
@@ -9,6 +11,18 @@ class BooksController < ApplicationController
   def create
     Book.create(book_info)
     redirect_to "/books"
+  end
+
+  def view
+    @book = Book.find(params["id"])
+  end
+
+  def edit
+    @book = Book.find(params["id"])
+  end
+
+  def update
+
   end
 
   def delete

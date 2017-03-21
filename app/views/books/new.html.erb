@@ -1,9 +1,9 @@
-<%= form_tag "/books" do %>
+<%= form_tag "/books/" do %>
   <%= label_tag "book[name]", "Name" %>
     <%= text_field_tag "book[name]" %>
   <%= label_tag "book[isbn_number]", "ISBN number" %>
     <%= text_field_tag "book[isbn_number]" %>
   <%= label_tag "book[description]", "Description" %>
-    <%= text_field_tag "book[description]" %>
+    <%= text_area_tag "book[description]" %>
   <%= submit_tag %>
 <% end %>
