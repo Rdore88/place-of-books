@@ -3,4 +3,6 @@
     <p>
       <%= book.name %>
     </p>
+    <%= button_to "delete", {:controller => :books,
+      :action => 'delete', :id => book.id }, :method => :delete %>
   <% end %>
