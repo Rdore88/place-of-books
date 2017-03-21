@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'books/index'
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get "/books", controller: "books", action: "index"
@@ -12,6 +10,8 @@ Rails.application.routes.draw do
   post "/books", controller: "books", action: "create"
 
   get "/books/:id/edit", controller: "books", action: "edit"
+
+  patch "/books/:id", controller: "books", action: "update"
 
   delete "/books/:id", controller: "books", action: "delete"
 
