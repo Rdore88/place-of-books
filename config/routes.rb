@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get "/books/new", controller: "books", action: "new"
 
-  get "books/:id", controller: "books", action: "view"
+  get "/books/:id", controller: "books", action: "view"
 
   post "/books", controller: "books", action: "create"
 
