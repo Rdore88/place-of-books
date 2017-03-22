@@ -1,0 +1,32 @@
+<h1>Reservations</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Book</th>
+      <th>Date Checked Out</th>
+      <th>Due Date</th>
+      <th>Overdue?</th>
+      <th>Return Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reservation.each do |reservation| %>
+    <tr>
+      <td><%= reservation.name %></td>
+      <td><%= reservation.book_name %></td>
+      <td><%= reservation.checked_out %></td>
+      <td><%= reservation.due_date %></td>
+        <% if Time.now > reservation.due_date %>
+          <td>OVERDUE</td>
+        <% else %>
+          <td>Fine</td>
+        <% end %>
+        <% if reservation.return_date %>
+          <td><%= reservation.return_date %></td>
+        <% else %>
+          <td><a href="/reservations/<%= reservation.id %>/return">Return Book</a></td>
+        <% end %>
+    </tr>
+    <% end %>
+  </tbody>

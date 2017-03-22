@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Robby
+  checked_out:
+  return_date:
+  book_id: 1
+
+two:
+  name: Molly
+  checked_out:
+  return_date:
+  book_id: 2

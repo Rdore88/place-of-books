@@ -7,4 +7,5 @@
       :action => 'delete', :id => book.id }, :method => :delete %>
       <a href="/books/<%= book.id %>">View Info</a>
       <a href="books/<%= book.id %>/edit">Edit</a>
-  <% end %>
+      <a href="/reservations/<%= book.id %>/new">Reserve this book</a>
+<% end %>

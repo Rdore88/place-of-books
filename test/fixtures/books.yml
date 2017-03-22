@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: The Hobbit
   isbn_number: MyString
   description: MyText
 
 two:
-  name: MyString
+  name: NSYNC Biographies
   isbn_number: MyString
   description: MyText

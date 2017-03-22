@@ -15,4 +15,12 @@ Rails.application.routes.draw do
 
   delete "/books/:id", controller: "books", action: "delete"
 
+  get "/reservations", controller: "reservations", action: "index"
+
+  get "/reservations/:book_id/new", controller: "reservations", action: "new"
+
+  get "/reservations/:id/return", controller: "reservations", action: "return"
+
+  post "/reservations", controller: "reservations", action: "create"
+
 end
