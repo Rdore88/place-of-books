@@ -12,9 +12,9 @@ class ReservationsController < ApplicationController
   def create
     book = Book.find(params["reservation"]["book_id"])
     book.checked_out = true
+    book.save
     dates = { checked_out: Time.now, due_date: 10.days.from_now }
     all_data = reservation_params.merge!(dates)
-    binding.pry
     Reservation.create(all_data)
     redirect_to "/reservations"
   end

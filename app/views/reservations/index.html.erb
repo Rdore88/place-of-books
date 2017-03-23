@@ -1,5 +1,5 @@
 <h1>Reservations</h1>
-<table>
+<table class="table table-hover table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -18,7 +18,7 @@
       <td><%= reservation.checked_out %></td>
       <td><%= reservation.due_date %></td>
         <% if Time.now > reservation.due_date %>
-          <td>OVERDUE</td>
+          <td class="btn btn-danger">OVERDUE</td>
         <% else %>
           <td>Fine</td>
         <% end %>
