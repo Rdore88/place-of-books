@@ -1,6 +1,6 @@
 <%= form_tag "/reservations" do %>
   <%= label_tag "reservation[name]", "Name" %>
   <%= text_field_tag "reservation[name]" %>
-  <%= hidden_field_tag "reservation[book_id]", "#{@book.id}" %>
+  <%= hidden_field_tag "reservation[book_id]", @book.id %>
   <%= submit_tag %>
 <% end %>

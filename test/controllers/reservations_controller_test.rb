@@ -8,14 +8,9 @@ class ReservationsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test "can see index of reservations" do
-  #   get "/reservations"
-  #   assert_select "td", "Molly"
-  # end
-
-  # test "can return book" do
-  #   hobbit = Reservation.create(name: "Robby Dore")
-  #   get "/reservations/#{hobbit.id}/return"
-  #   assert_redirected_to "/reservations"
-  # end
+  test "can return book" do
+    hobbit = Reservation.create(name: "Robby Dore", book: books(:one))
+    get "/reservations/#{hobbit.id}/return"
+    assert_redirected_to "/reservations"
+  end
 end

@@ -14,7 +14,7 @@
     <% @reservation.each do |reservation| %>
     <tr>
       <td><%= reservation.name %></td>
-      <td><%= reservation.book_name %></td>
+      <td><%= reservation&.book_name %></td>
       <td><%= reservation.checked_out %></td>
       <td><%= reservation.due_date %></td>
         <% if Time.now > reservation.due_date %>
